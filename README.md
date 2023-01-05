@@ -17,7 +17,7 @@ joy_coefficient_u_g = (hours_played_u_g - average_hours_played_g) / average_hour
 ##### Activation
 The main idea of this part is to convert a continous value of the `joy_coefficient` into a value that ranges from 0 to 5.
 
-A perfect function for that is the [Sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function#:~:text=A%20sigmoid%20function%20is%20a%20bounded%2C%20differentiable%2C%20real%20function%20that,refer%20to%20the%20same%20object.) function, whose value approaches `1` as `x` approaches infinity, and also its value approaches 0 as `x` approaches negative infinity - it has a range of (0, 1). By multiplying the `Sigmoid` by `5`, a function with a range of `(0, 5)` is obtained.
+A perfect function for that is the [Sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function#:~:text=A%20sigmoid%20function%20is%20a%20bounded%2C%20differentiable%2C%20real%20function%20that,refer%20to%20the%20same%20object.) function, whose value approaches `1` as `x` approaches infinity, and also its value approaches 0 as `x` approaches negative infinity - it has a range of `(0, 1)`. By multiplying the Sigmoid by `5`, a function with a range of `(0, 5)` is obtained.
 
 So finally, the rating of user `u` for a game `g` is obtained as:
 ```
@@ -43,4 +43,4 @@ This behaviour can be understood more clearly by taking a look at the plot below
 https://drive.google.com/file/d/12krBswoap1c35m9Pp8pZfqxb1gWg5xIV/view?usp=sharing
 ![Sigmoid Image](https://drive.google.com/uc?id=12krBswoap1c35m9Pp8pZfqxb1gWg5xIV)
 
-In the above illustration you can also see that if the `joy_coefficient` is negative, the ratings will be in the range of `(0, 2.5)`, and if the `joy_coefficient` is positive, the rating will be in the range of `(2.5 - 5)`.
+In the above illustration you can also see that if the `joy_coefficient` is negative, the ratings will be in the range of `(0, 2.5)`, and if the `joy_coefficient` is positive, the rating will be in the range of `(2.5, 5)`.

@@ -44,3 +44,8 @@ https://drive.google.com/file/d/12krBswoap1c35m9Pp8pZfqxb1gWg5xIV/view?usp=shari
 ![Sigmoid Image](https://drive.google.com/uc?id=12krBswoap1c35m9Pp8pZfqxb1gWg5xIV)
 
 In the above illustration you can also see that if the `joy_coefficient` is negative, the ratings will be in the range of `(0, 2.5)`, and if the `joy_coefficient` is positive, the rating will be in the range of `(2.5, 5)`.
+
+### Benefits of implicit ratings
+- The system is not dependent on direct user feedback (ratings)
+- Bias is generally decreased
+- More ratings since the system is instantly aware of each users playtime for each game that they have bought, whereas with direct/explictit ratings the system is only aware of the user's rating for a game once they decide to actually rate it. Most of the users have played a lot of games, but have only left reviews for a handful.

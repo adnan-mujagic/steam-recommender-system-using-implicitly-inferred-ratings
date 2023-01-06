@@ -10,7 +10,7 @@ The implicit ratings are calculated using a formula that consists of two parts:
 
 ##### Joy coefficient
 Joy coefficient of user `u` for the game `g`:
-```
+```python
 joy_coefficient_u_g = (hours_played_u_g - average_hours_played_g) / average_hours_played_g
 ```
 
@@ -20,7 +20,7 @@ The main idea of this part is to convert a continous value of the `joy_coefficie
 A perfect function for that is the [Sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function#:~:text=A%20sigmoid%20function%20is%20a%20bounded%2C%20differentiable%2C%20real%20function%20that,refer%20to%20the%20same%20object.) function, whose value approaches `1` as `x` approaches infinity, and also its value approaches 0 as `x` approaches negative infinity - it has a range of `(0, 1)`. By multiplying the Sigmoid by `5`, a function with a range of `(0, 5)` is obtained.
 
 So finally, the rating of user `u` for a game `g` is obtained as:
-```
+```python
 rating_u_g = 5 * Sigmoid(joy_coefficient_u_g)
 ```
 
@@ -29,12 +29,12 @@ From the dataset, a user with id `98649241` has played a game called `Warframe` 
 The average playtime for `Warframe` is `31.96` hours.
 
 Calculating the `joy_coefficient`:
-```
+```python
 joy_coefficient = (83 - 31.96) / 31.96 = 1.596
 ```
 
 The `rating` is then:
-```
+```python
 rating = 5 * Sigmoid(1.596) = 4.158
 ```
 
